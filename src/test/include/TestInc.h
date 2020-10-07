@@ -4,12 +4,17 @@
 // or the GNU Lesser General Public License.
 /////////////////////////////////////////////////////////////////////////////
 
-#ifdef _WIN32
+#if defined(_WIN32) || defined(_WIN64)
 
 #include "targetver.h"
 
+#ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
+#endif
+
+#ifndef NOMINMAX
 #define NOMINMAX
+#endif
 
 #include <windows.h>
 
